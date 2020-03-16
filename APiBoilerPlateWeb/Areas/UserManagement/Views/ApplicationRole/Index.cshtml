@@ -1,0 +1,83 @@
+﻿
+@{
+    ViewData["Title"] = "Roles";
+}
+
+@{
+    List<object> toolbarItems = new List<object>();
+    toolbarItems.Add("Add");
+    toolbarItems.Add("Edit");
+    toolbarItems.Add("Delete");
+    toolbarItems.Add("Update");
+    toolbarItems.Add("Cancel");
+    toolbarItems.Add(new { text = "Claims", tooltipText = "Claims", prefixIcon = "e-claim-icon", id = "Claims" });
+}
+
+
+<h1>Roles</h1>
+
+<ejs-grid id="Grid" allowPaging="true" allowSorting="true" actionComplete="complete" toolbarClick="toolbarClick" toolbar=toolbarItems rowSelected="onRowSelected">
+    <e-grid-editSettings allowAdding="true" allowDeleting="true" allowEditing="true" mode="Dialog"></e-grid-editSettings>
+    <e-grid-pagesettings pagesize="10"></e-grid-pagesettings>
+    <e-data-manager url="/UserManagement/ApplicationRole/RolesDataSource" insertUrl="/UserManagement/ApplicationRole/Insert" updateUrl="/UserManagement/ApplicationRole/Update" removeUrl="/UserManagement/ApplicationRole/Delete" adaptor="UrlAdaptor"></e-data-manager>
+    <e-grid-columns>
+        <e-grid-column field="Id" headerText="ID" isPrimaryKey="true" visible="false"></e-grid-column>
+        <e-grid-column field="RoleName" headerText="Role Name" type="string" width="120"></e-grid-column>
+    </e-grid-columns>
+</ejs-grid>
+
+<div id="container" style="height:400px;">
+    <ejs-dialog id="dialog" isModal="true" showCloseIcon="true" overlayClick="onOverlayClick" header="Please select a role first" visible="false" target="#container" width="300px"></ejs-dialog>
+</div>
+
+    <input type="hidden" id="RoleSelection" value="" />
+
+
+<script type="text/javascript">
+    function complete(args) {
+        if ((args.requestType === 'beginEdit' || args.requestType === 'add')) {
+            let dialog = args.dialog;
+            // change the header of the dialog
+            dialog.header = args.requestType === 'beginEdit' ? 'Edit Record' : 'New Record';
+        }
+    }
+
+
+    function toolbarClick(args) {
+           if (args.item.id === 'Claims') {
+
+               var gridObj = document.getElementById("Grid").ej2_instances[0];
+               var theId = $("#RoleSelection").val();
+               console.log("the id is" + theId);
+               if (theId === '' || theId === null || theId === undefined) {
+                   var dialog = document.getElementById("dialog").ej2_instances[0];
+                   dialog.show();
+                   //alert("Please select a role first");
+               }
+               else {
+               window.location.href = '@Url.Action("ManageClaim", "ApplicationRole", new { Area = "UserManagement" })' + "/" + theId;
+
+               }
+           }
+    }
+
+    function onRowSelected(args) {
+        //Retrieve the selected records of the grid
+        var result = this.getSelectedRecords();
+        //place the id of the grid`s selected record as value of hidden element
+        $("#RoleSelection").val(result[0].Id);
+    }
+
+    function onOverlayClick() {
+        var dialog = document.getElementById("dialog").ej2_instances[0];
+        dialog.hide();
+    }
+
+</script>
+
+
+@*<style>
+    .e-claim-icon::before {
+        content: '\e30d';
+    }
+</style>*@

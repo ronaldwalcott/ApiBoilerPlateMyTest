@@ -1,0 +1,79 @@
+2020-03-16T11:47:47.2282063-04:00 [INF] () Starting web host
+2020-03-16T11:48:01.6604355-04:00 [ERR] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "PostgreSQL" completed after 181.7285ms with status Unhealthy and 'null'
+2020-03-16T11:48:05.5774978-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "Auth Server" completed after 4189.3192ms with status Degraded and 'null'
+2020-03-16T11:48:05.5780976-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "External Api" completed after 4185.4167ms with status Degraded and 'null'
+2020-03-16T11:48:11.2006751-04:00 [ERR] (Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer) Connection ID ""18230571306091282445"", Request ID ""8000000e-0003-fd00-b63f-84710c7967bb"": An unhandled exception was thrown by the application.
+System.InvalidOperationException: Cannot find the services container for the non-OData route. This can occur when using OData components on the non-OData route and is usually a configuration issue. Call EnableDependencyInjection() to enable OData components on non-OData routes. This may also occur when a request was mistakenly handled by the ASP.NET Core routing layer instead of the OData routing layer, for instance the URL does not include the OData route prefix configured via a call to MapODataServiceRoute().
+   at Microsoft.AspNet.OData.PerRouteContainerBase.GetODataRootContainer(String routeName)
+   at Microsoft.AspNet.OData.Extensions.HttpRequestExtensions.CreateRequestScope(HttpRequest request, String routeName)
+   at Microsoft.AspNet.OData.Extensions.HttpRequestExtensions.CreateRequestContainer(HttpRequest request, String routeName)
+   at Microsoft.AspNet.OData.Extensions.HttpRequestExtensions.GetRequestContainer(HttpRequest request)
+   at Microsoft.AspNet.OData.Extensions.HttpRequestExtensions.GetModel(HttpRequest request)
+   at Microsoft.AspNet.OData.EnableQueryAttribute.GetModel(Type elementClrType, HttpRequest request, ActionDescriptor actionDescriptor)
+   at Microsoft.AspNet.OData.EnableQueryAttribute.<>c__DisplayClass1_0.<OnActionExecuted>b__0(Type elementClrType)
+   at Microsoft.AspNet.OData.EnableQueryAttribute.ContainsAutoSelectExpandProperty(Object responseValue, IQueryable singleResultCollection, IWebApiActionDescriptor actionDescriptor, Func`2 modelFunction, ODataPath path)
+   at Microsoft.AspNet.OData.EnableQueryAttribute.OnActionExecuted(Object responseValue, IQueryable singleResultCollection, IWebApiActionDescriptor actionDescriptor, IWebApiRequestMessage request, Func`2 modelFunction, Func`2 createQueryOptionFunction, Action`1 createResponseAction, Action`3 createErrorAction)
+   at Microsoft.AspNet.OData.EnableQueryAttribute.OnActionExecuted(ActionExecutedContext actionExecutedContext)
+   at Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at AspNetCoreRateLimit.RateLimitMiddleware`1.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContextOfT`1.ProcessRequestAsync()
+2020-03-16T11:48:11.5267736-04:00 [ERR] (HealthChecks.UI.Core.Notifications.WebHookFailureNotifier) The failure notification for  has not executed successfully.
+2020-03-16T11:48:21.8469736-04:00 [ERR] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "PostgreSQL" completed after 16.1425ms with status Unhealthy and 'null'
+2020-03-16T11:48:25.8781580-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "External Api" completed after 4046.4592ms with status Degraded and 'null'
+2020-03-16T11:48:25.8777698-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "Auth Server" completed after 4046.3783ms with status Degraded and 'null'
+2020-03-16T11:48:25.9268893-04:00 [INF] (HealthChecks.UI.Core.Notifications.WebHookFailureNotifier) Notification is sent on same window time.
+2020-03-16T11:48:44.9736283-04:00 [INF] () Starting web host
+2020-03-16T11:48:49.4510869-04:00 [ERR] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "PostgreSQL" completed after 71.2574ms with status Unhealthy and 'null'
+2020-03-16T11:48:50.1869106-04:00 [ERR] (AutoWrapper.AutoWrapperMiddleware) [500]: Unhandled Exception occurred. Unable to process the request.
+System.InvalidOperationException: Cannot find the services container for the non-OData route. This can occur when using OData components on the non-OData route and is usually a configuration issue. Call EnableDependencyInjection() to enable OData components on non-OData routes. This may also occur when a request was mistakenly handled by the ASP.NET Core routing layer instead of the OData routing layer, for instance the URL does not include the OData route prefix configured via a call to MapODataServiceRoute().
+   at Microsoft.AspNet.OData.PerRouteContainerBase.GetODataRootContainer(String routeName)
+   at Microsoft.AspNet.OData.Extensions.HttpRequestExtensions.CreateRequestScope(HttpRequest request, String routeName)
+   at Microsoft.AspNet.OData.Extensions.HttpRequestExtensions.CreateRequestContainer(HttpRequest request, String routeName)
+   at Microsoft.AspNet.OData.Extensions.HttpRequestExtensions.GetRequestContainer(HttpRequest request)
+   at Microsoft.AspNet.OData.Extensions.HttpRequestExtensions.GetModel(HttpRequest request)
+   at Microsoft.AspNet.OData.EnableQueryAttribute.GetModel(Type elementClrType, HttpRequest request, ActionDescriptor actionDescriptor)
+   at Microsoft.AspNet.OData.EnableQueryAttribute.<>c__DisplayClass1_0.<OnActionExecuted>b__0(Type elementClrType)
+   at Microsoft.AspNet.OData.EnableQueryAttribute.ContainsAutoSelectExpandProperty(Object responseValue, IQueryable singleResultCollection, IWebApiActionDescriptor actionDescriptor, Func`2 modelFunction, ODataPath path)
+   at Microsoft.AspNet.OData.EnableQueryAttribute.OnActionExecuted(Object responseValue, IQueryable singleResultCollection, IWebApiActionDescriptor actionDescriptor, IWebApiRequestMessage request, Func`2 modelFunction, Func`2 createQueryOptionFunction, Action`1 createResponseAction, Action`3 createErrorAction)
+   at Microsoft.AspNet.OData.EnableQueryAttribute.OnActionExecuted(ActionExecutedContext actionExecutedContext)
+   at Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at AspNetCoreRateLimit.RateLimitMiddleware`1.Invoke(HttpContext context)
+   at AutoWrapper.Base.WrapperBase.InvokeAsyncBase(HttpContext context, AutoWrapperMembers awm)
+2020-03-16T11:48:50.3554476-04:00 [INF] (AutoWrapper.AutoWrapperMiddleware) Request: GET https localhost:44321/api/v1/persons   Responded with [500] in 1033ms
+2020-03-16T11:48:50.5021847-04:00 [INF] (AutoWrapper.AutoWrapperMiddleware) Request: GET https localhost:44321/favicon.ico   Responded with [404] in 3ms
+2020-03-16T11:48:50.7035834-04:00 [INF] (AutoWrapper.AutoWrapperMiddleware) Request: GET https localhost:44321/odata/persons/ ?$count=true&$skip=0&$top=7  Responded with [200] in 1387ms
+2020-03-16T11:48:53.4028075-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "External Api" completed after 4050.1633ms with status Degraded and 'null'
+2020-03-16T11:48:53.4361345-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "Auth Server" completed after 4083.7625ms with status Degraded and 'null'
+2020-03-16T11:48:53.6761724-04:00 [ERR] (HealthChecks.UI.Core.Notifications.WebHookFailureNotifier) The failure notification for  has not executed successfully.
+2020-03-16T11:49:03.8748262-04:00 [ERR] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "PostgreSQL" completed after 2.2565ms with status Unhealthy and 'null'
+2020-03-16T11:49:07.9017832-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "External Api" completed after 4029.6271ms with status Degraded and 'null'
+2020-03-16T11:49:07.9017923-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "Auth Server" completed after 4029.8571ms with status Degraded and 'null'
+2020-03-16T11:49:07.9209897-04:00 [INF] (HealthChecks.UI.Core.Notifications.WebHookFailureNotifier) Notification is sent on same window time.

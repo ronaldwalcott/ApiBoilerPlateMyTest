@@ -1,0 +1,156 @@
+﻿
+@{
+    ViewData["Title"] = "Users";
+}
+
+@{
+    List<object> toolbarItems = new List<object>();
+    toolbarItems.Add("Edit");
+    toolbarItems.Add("Delete");
+    toolbarItems.Add("Update");
+    toolbarItems.Add("Cancel");
+    toolbarItems.Add(new { text = "Roles", tooltipText = "Roles", prefixIcon = "e-claim-icon", id = "Roles" });
+    toolbarItems.Add(new { text = "Lock", tooltipText = "Lock User", prefixIcon = "e-claim-icon", id = "Lock" });
+    toolbarItems.Add(new { text = "Unlock", tooltipText = "Unlock User", prefixIcon = "e-claim-icon", id = "Unlock" });
+    toolbarItems.Add(new { text = "Reset", tooltipText = "Reset Password", prefixIcon = "e-claim-icon", id = "Reset" });
+}
+
+
+<h1>Users</h1>
+
+<ejs-grid id="Grid" allowPaging="true" allowSorting="true" actionComplete="complete" toolbarClick="toolbarClick" toolbar=toolbarItems rowSelected="onRowSelected">
+    <e-grid-editSettings allowAdding="true" allowDeleting="true" allowEditing="true" mode="Dialog" template='#dialogtemplate'></e-grid-editSettings>
+    <e-grid-pagesettings pagesize="10"></e-grid-pagesettings>
+    <e-data-manager url="/UserManagement/UserEdit/UsersDataSource" updateUrl="/UserManagement/UserEdit/Update" removeUrl="/UserManagement/UserEdit/Delete" adaptor="UrlAdaptor"></e-data-manager>
+    <e-grid-columns>
+        <e-grid-column field="Id" headerText="ID" isPrimaryKey="true" visible="false"></e-grid-column>
+        <e-grid-column field="UserName" headerText="Username" type="string" width="120"></e-grid-column>
+        <e-grid-column field="Name" headerText="Name" type="string" width="120"></e-grid-column>
+        <e-grid-column field="EmployeeNumber" headerText="Employee No" type="string" width="120"></e-grid-column>
+        <e-grid-column field="RoleNames" headerText="Role names" type="string" width="120"></e-grid-column>
+        <e-grid-column field="LockoutEnabled" headerText="Locked Out" displayAsCheckBox="true" width="120"></e-grid-column>
+    </e-grid-columns>
+</ejs-grid>
+
+
+<div id="container" style="height:400px;">
+    <ejs-dialog id="dialog" isModal="true" showCloseIcon="true" overlayClick="onOverlayClick"  visible="false" target="#container" width="300px"></ejs-dialog>
+</div>
+
+<input type="hidden" id="UserSelection" value="" />
+
+
+<script id='dialogtemplate' type="text/x-template">
+    <div id="dialogTemp">
+    </div>
+</script>
+
+<script type="text/javascript">
+    function complete(args) {
+            if (args.requestType === 'beginEdit' || args.requestType === 'add') {
+                let spinner = ej.popups.createSpinner({ target: args.dialog.element });
+                ej.popups.showSpinner(args.dialog.element);
+                let dialog = args.dialog;
+                // change the header of the dialog
+                dialog.header = args.requestType === 'beginEdit' ? 'Edit Record' : 'New Record';
+                if (args.requestType === 'beginEdit') {
+                    var ajax = new ej.base.Ajax({
+                        url: "@Url.Action("Editpartial", "UserEdit", new { Area = "UserManagement" })", //render the partial view
+                        type: "POST",
+                        contentType: "application/json",
+                        data: JSON.stringify({ value: args.rowData })
+                    });
+                    ajax.send().then(function (data) {
+                        appendElement(data, args.form); //Render the edit form with selected record
+                        args.form.elements.namedItem('UserName').focus(); //set the focus for editing to username
+                        ej.popups.hideSpinner(args.dialog.element);
+                    }).catch(function (xhr) {
+                        console.log(xhr);
+                        ej.popups.hideSpinner(args.dialog.element);
+                    });
+                }
+            }
+        }
+
+
+    function toolbarClick(args) {
+        if (args.item.id === 'Roles' || args.item.id === 'Lock' || args.item.id === 'Unlock' || args.item.id === 'Reset') {
+            var gridObj = document.getElementById("Grid").ej2_instances[0];
+            var theId = $("#UserSelection").val();
+            console.log("the id is" + theId);
+            if (theId === '' || theId === null || theId === undefined) {
+                var dialog = document.getElementById("dialog").ej2_instances[0];
+                dialog.header = "Please select a user first";
+                dialog.show();
+                //alert("Please select a user first");
+            }
+            else {
+
+                if (args.item.id === 'Roles') {
+                    window.location.href = '@Url.Action("ManageRole", "UserEdit", new { Area = "UserManagement" })' + "/" + theId;
+                }
+                if (args.item.id === 'Lock') {
+                    $.ajax({
+                        url: "@Url.Action("LockUser", "UserEdit", new { Area = "UserManagement" })" + "/" + theId, type: "POST", error: function (req, status, error) {
+                            var dialog = document.getElementById("dialog").ej2_instances[0];
+                            dialog.header = req.responseText;
+                            dialog.show();
+
+                            //alert(req.responseText);
+                        }
+                         }).done(function () {
+                            var dialog = document.getElementById("dialog").ej2_instances[0];
+                            dialog.header = "User locked";
+                            dialog.show();
+                            //alert("User locked");
+                            }) ;
+                }
+                if (args.item.id === 'Unlock') {
+                    $.ajax({
+                        url: "@Url.Action("UnlockUser", "UserEdit", new { Area = "UserManagement" })" + "/" + theId, type: "POST", error: function (req, status, error) {
+                            var dialog = document.getElementById("dialog").ej2_instances[0];
+                            dialog.header = req.responseText;
+                            dialog.show();
+                            //alert(req.responseText);
+                        }
+                         }).done(function () {
+                            var dialog = document.getElementById("dialog").ej2_instances[0];
+                            dialog.header = "User unlocked";
+                            dialog.show();
+                            //alert("User unlocked");
+                            }) ;
+                }
+                if (args.item.id === 'Reset') {
+                    window.location.href = '@Url.Action("ResetPassword", "UserEdit", new { Area = "UserManagement" })' + "/" + theId;
+                }
+            }
+        }
+    }
+
+    function onRowSelected(args) {
+        //Retrieve the selected records of the grid
+        var result = this.getSelectedRecords();
+        //place the id of the grid`s selected record as value of hidden element
+        $("#UserSelection").val(result[0].Id);
+    }
+
+    function onOverlayClick() {
+        var dialog = document.getElementById("dialog").ej2_instances[0];
+        dialog.hide();
+    }
+
+
+    function appendElement(elementString, form) {
+        form.querySelector("#dialogTemp").innerHTML = elementString;
+        var script = document.createElement('script');
+        script.type = "text/javascript";
+        var serverScript = form.querySelector("#dialogTemp").querySelector('script');
+        script.textContent = serverScript.innerHTML;
+        document.head.appendChild(script);
+        serverScript.remove();
+    }
+
+
+
+
+</script>

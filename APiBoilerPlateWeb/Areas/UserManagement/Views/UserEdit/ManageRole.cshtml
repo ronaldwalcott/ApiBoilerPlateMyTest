@@ -1,0 +1,52 @@
+﻿@model APiBoilerPlateWeb.Areas.UserManagement.Models.UserRoleEditViewModel
+@{
+    ViewData["Title"] = "ManageRole";
+}
+
+<h1>Manage Roles for </h1>
+<h2>@Model.Name</h2>
+
+<hr />
+
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="ManageRole">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+
+            <div class="form-row">
+                @{ int i = 0; }
+                @foreach (var item in Model.UserRoles)
+                {
+                    <div class="form-group col-sm-6 col-md-4">
+                        @*<input type="checkbox" asp-for="UserRoles[i].HasRole" /> @Html.DisplayFor(model => item.RoleName)*@
+
+                        <ejs-checkbox id="@item.RoleName" ejs-for="@Model.UserRoles[i].HasRole">@item.RoleName</ejs-checkbox>
+
+                    </div>
+
+                    //create two hidden fields for the id and rolename values
+                    <input type="hidden" asp-for="UserRoles[i].Id" />
+                    <input type="hidden" asp-for="UserRoles[i].RoleName" />
+
+                    i++;
+                }
+
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <input type="submit" value="Save" class="btn btn-primary" />
+                    </div>
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+</div>
+
+<div>
+    <a asp-action="Index" class="btn btn-outline-primary">Back to List</a>
+</div>

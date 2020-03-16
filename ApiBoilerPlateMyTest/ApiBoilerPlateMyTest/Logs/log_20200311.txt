@@ -1,0 +1,203 @@
+2020-03-11T15:32:45.9932570-04:00 [INF] () Starting web host
+2020-03-11T15:32:54.3854603-04:00 [ERR] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "PostgreSQL" completed after 168.0775ms with status Unhealthy and 'null'
+2020-03-11T15:32:58.2902352-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "Auth Server" completed after 4117.3798ms with status Degraded and 'null'
+2020-03-11T15:32:58.3080546-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "External Api" completed after 4099.8703ms with status Degraded and 'null'
+2020-03-11T15:33:08.2227993-04:00 [INF] (AutoWrapper.AutoWrapperMiddleware) Request: GET https localhost:44321/api/v1/persons   Responded with [200] in 14064ms
+2020-03-11T15:33:08.2691670-04:00 [ERR] (HealthChecks.UI.Core.Notifications.WebHookFailureNotifier) The failure notification for  has not executed successfully.
+2020-03-11T15:33:08.4746854-04:00 [INF] (AutoWrapper.AutoWrapperMiddleware) Request: GET https localhost:44321/favicon.ico   Responded with [404] in 7ms
+2020-03-11T15:33:08.8830588-04:00 [INF] (AutoWrapper.AutoWrapperMiddleware) Request: GET https localhost:44321/api/v1/persons/paged/ ?$inlinecount=allpages&$skip=0&$top=12  Responded with [400] in 14726ms
+2020-03-11T15:33:18.8860055-04:00 [ERR] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "PostgreSQL" completed after 1.6044ms with status Unhealthy and 'null'
+2020-03-11T15:33:22.8950004-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "External Api" completed after 4012.3601ms with status Degraded and 'null'
+2020-03-11T15:33:22.8970453-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "Auth Server" completed after 4015.8854ms with status Degraded and 'null'
+2020-03-11T15:33:22.9195538-04:00 [INF] (HealthChecks.UI.Core.Notifications.WebHookFailureNotifier) Notification is sent on same window time.
+2020-03-11T15:33:33.0289718-04:00 [ERR] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "PostgreSQL" completed after 2.015ms with status Unhealthy and 'null'
+2020-03-11T15:33:33.0668395-04:00 [ERR] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "Google Ping" completed after 52.4693ms with status Unhealthy and '"Ping check status [TimedOut]. Host www.google.com did not respond within 100 ms."'
+2020-03-11T15:33:33.0669747-04:00 [ERR] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "Bing Ping" completed after 52.5914ms with status Unhealthy and '"Ping check status [TimedOut]. Host www.bing.com did not respond within 100 ms."'
+2020-03-11T15:33:37.0340528-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "Auth Server" completed after 4018.951ms with status Degraded and 'null'
+2020-03-11T15:33:37.0376886-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "External Api" completed after 4022.6027ms with status Degraded and 'null'
+2020-03-11T15:33:37.0526154-04:00 [INF] (HealthChecks.UI.Core.Notifications.WebHookFailureNotifier) Notification is sent on same window time.
+2020-03-11T15:33:38.5134635-04:00 [INF] (AutoWrapper.AutoWrapperMiddleware) Request: GET https localhost:44321/api/v1/persons/paged/ ?$inlinecount=allpages&$skip=0&$top=12  Responded with [400] in 104ms
+2020-03-11T15:33:47.1435031-04:00 [ERR] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "PostgreSQL" completed after 19.1609ms with status Unhealthy and 'null'
+2020-03-11T15:33:47.5667082-04:00 [ERR] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "Google Ping" completed after 431.3978ms with status Unhealthy and '"Ping check status [TimedOut]. Host www.google.com did not respond within 100 ms."'
+2020-03-11T15:33:47.5668764-04:00 [ERR] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "Bing Ping" completed after 441.7907ms with status Unhealthy and '"Ping check status [TimedOut]. Host www.bing.com did not respond within 100 ms."'
+2020-03-11T15:33:51.1420918-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "Auth Server" completed after 4015.4248ms with status Degraded and 'null'
+2020-03-11T15:33:51.1431550-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "External Api" completed after 4018.7743ms with status Degraded and 'null'
+2020-03-11T15:33:51.1534152-04:00 [INF] (HealthChecks.UI.Core.Notifications.WebHookFailureNotifier) Notification is sent on same window time.
+2020-03-11T15:34:24.0911230-04:00 [INF] () Starting web host
+2020-03-11T15:34:28.1582138-04:00 [ERR] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "PostgreSQL" completed after 60.7195ms with status Unhealthy and 'null'
+2020-03-11T15:34:48.0995462-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "External Api" completed after 20038.5413ms with status Degraded and 'null'
+2020-03-11T15:34:48.0999162-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "Auth Server" completed after 20038.9488ms with status Degraded and 'null'
+2020-03-11T15:34:48.4064371-04:00 [INF] (AutoWrapper.AutoWrapperMiddleware) Request: GET https localhost:44321/api/v1/persons   Responded with [200] in 20359ms
+2020-03-11T15:34:48.4598991-04:00 [INF] (AutoWrapper.AutoWrapperMiddleware) Request: GET https localhost:44321/favicon.ico   Responded with [404] in 10ms
+2020-03-11T15:34:48.5167814-04:00 [INF] (AutoWrapper.AutoWrapperMiddleware) Request: GET https localhost:44321/api/v1/persons/paged/ ?$inlinecount=allpages&$skip=0&$top=12  Responded with [400] in 20472ms
+2020-03-11T15:34:48.5380099-04:00 [ERR] (HealthChecks.UI.Core.Notifications.WebHookFailureNotifier) The failure notification for  has not executed successfully.
+2020-03-11T15:34:58.8082735-04:00 [ERR] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "PostgreSQL" completed after 3.0771ms with status Unhealthy and 'null'
+2020-03-11T15:34:58.9292470-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "Google Ping" completed after 125.3761ms with status Degraded and '"Ping check for www.google.com takes too long to respond. Expected 100 ms but responded in 111 ms."'
+2020-03-11T15:34:58.9296815-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "Bing Ping" completed after 125.837ms with status Degraded and '"Ping check for www.bing.com takes too long to respond. Expected 100 ms but responded in 112 ms."'
+2020-03-11T15:35:02.8212317-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "External Api" completed after 4016.8106ms with status Degraded and 'null'
+2020-03-11T15:35:02.8274684-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "Auth Server" completed after 4023.6098ms with status Degraded and 'null'
+2020-03-11T15:35:02.8412367-04:00 [INF] (HealthChecks.UI.Core.Notifications.WebHookFailureNotifier) Notification is sent on same window time.
+2020-03-11T15:35:12.9820901-04:00 [ERR] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "PostgreSQL" completed after 4.4513ms with status Unhealthy and 'null'
+2020-03-11T15:35:16.9909372-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "External Api" completed after 4016.0606ms with status Degraded and 'null'
+2020-03-11T15:35:16.9954311-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "Auth Server" completed after 4020.5363ms with status Degraded and 'null'
+2020-03-11T15:35:17.0048846-04:00 [INF] (HealthChecks.UI.Core.Notifications.WebHookFailureNotifier) Notification is sent on same window time.
+2020-03-11T15:35:27.1166789-04:00 [ERR] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "PostgreSQL" completed after 1.8341ms with status Unhealthy and 'null'
+2020-03-11T15:35:31.1245830-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "External Api" completed after 4012.4443ms with status Degraded and 'null'
+2020-03-11T15:35:31.1259457-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "Auth Server" completed after 4015.2203ms with status Degraded and 'null'
+2020-03-11T15:35:31.1364624-04:00 [INF] (HealthChecks.UI.Core.Notifications.WebHookFailureNotifier) Notification is sent on same window time.
+2020-03-11T15:37:05.8827131-04:00 [INF] () Starting web host
+2020-03-11T15:37:09.8700733-04:00 [ERR] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "PostgreSQL" completed after 61.0832ms with status Unhealthy and 'null'
+2020-03-11T15:37:39.5876544-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "Auth Server" completed after 29832.2903ms with status Degraded and 'null'
+2020-03-11T15:37:39.5876543-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "External Api" completed after 29831.2627ms with status Degraded and 'null'
+2020-03-11T15:37:39.8787934-04:00 [INF] (AutoWrapper.AutoWrapperMiddleware) Request: GET https localhost:44321/api/v1/persons   Responded with [200] in 30139ms
+2020-03-11T15:37:39.9396035-04:00 [INF] (AutoWrapper.AutoWrapperMiddleware) Request: GET https localhost:44321/favicon.ico   Responded with [404] in 15ms
+2020-03-11T15:37:39.9883920-04:00 [INF] (AutoWrapper.AutoWrapperMiddleware) Request: GET https localhost:44321/api/v1/persons/paged/ ?$count=true&$skip=0&$top=12  Responded with [400] in 30253ms
+2020-03-11T15:37:40.0598836-04:00 [ERR] (HealthChecks.UI.Core.Notifications.WebHookFailureNotifier) The failure notification for  has not executed successfully.
+2020-03-11T15:37:50.2897664-04:00 [ERR] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "PostgreSQL" completed after 5.0578ms with status Unhealthy and 'null'
+2020-03-11T15:37:54.2998268-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "External Api" completed after 4015.909ms with status Degraded and 'null'
+2020-03-11T15:37:54.2998266-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "Auth Server" completed after 4016.0297ms with status Degraded and 'null'
+2020-03-11T15:37:54.3218963-04:00 [INF] (HealthChecks.UI.Core.Notifications.WebHookFailureNotifier) Notification is sent on same window time.
+2020-03-11T15:38:04.5284211-04:00 [ERR] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "PostgreSQL" completed after 2.9703ms with status Unhealthy and 'null'
+2020-03-11T15:38:04.5673471-04:00 [ERR] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "Google Ping" completed after 93.6438ms with status Unhealthy and '"Ping check status [TimedOut]. Host www.google.com did not respond within 100 ms."'
+2020-03-11T15:38:04.5675659-04:00 [ERR] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "Bing Ping" completed after 92.9156ms with status Unhealthy and '"Ping check status [TimedOut]. Host www.bing.com did not respond within 100 ms."'
+2020-03-11T15:38:08.5092101-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "Auth Server" completed after 4033.9922ms with status Degraded and 'null'
+2020-03-11T15:38:08.5391731-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "External Api" completed after 4044.7975ms with status Degraded and 'null'
+2020-03-11T15:38:08.5587647-04:00 [INF] (HealthChecks.UI.Core.Notifications.WebHookFailureNotifier) Notification is sent on same window time.
+2020-03-11T15:38:18.6712567-04:00 [ERR] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "PostgreSQL" completed after 3.9537ms with status Unhealthy and 'null'
+2020-03-11T15:38:22.6790277-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "External Api" completed after 4017.34ms with status Degraded and 'null'
+2020-03-11T15:38:22.6790278-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "Auth Server" completed after 4017.8828ms with status Degraded and 'null'
+2020-03-11T15:38:22.6892698-04:00 [INF] (HealthChecks.UI.Core.Notifications.WebHookFailureNotifier) Notification is sent on same window time.
+2020-03-11T15:39:26.0495002-04:00 [INF] (AutoWrapper.AutoWrapperMiddleware) Request: GET https localhost:44321/api/v1/persons/paged/ ?$count=true&$orderby=lastName&$skip=0&$top=12  Responded with [400] in 55073ms
+2020-03-11T15:39:26.0575181-04:00 [ERR] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "PostgreSQL" completed after 1.12ms with status Unhealthy and 'null'
+2020-03-11T15:39:26.0700845-04:00 [ERR] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "Google Ping" completed after 14.5996ms with status Unhealthy and '"Ping check status [TimedOut]. Host www.google.com did not respond within 100 ms."'
+2020-03-11T15:39:26.0747810-04:00 [ERR] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "Bing Ping" completed after 18.9221ms with status Unhealthy and '"Ping check status [TimedOut]. Host www.bing.com did not respond within 100 ms."'
+2020-03-11T15:39:30.0695827-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "External Api" completed after 4011.9568ms with status Degraded and 'null'
+2020-03-11T15:39:30.0754695-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "Auth Server" completed after 4019.7889ms with status Degraded and 'null'
+2020-03-11T15:39:30.1610181-04:00 [ERR] (HealthChecks.UI.Core.Notifications.WebHookFailureNotifier) The failure notification for  has not executed successfully.
+2020-03-11T15:50:33.9970442-04:00 [INF] () Starting web host
+2020-03-11T15:50:37.7739549-04:00 [ERR] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "PostgreSQL" completed after 58.3812ms with status Unhealthy and 'null'
+2020-03-11T15:50:37.9763106-04:00 [INF] (AutoWrapper.AutoWrapperMiddleware) Request: GET https localhost:44321/api/v1/persons   Responded with [405] in 310ms
+2020-03-11T15:50:38.0197939-04:00 [INF] (AutoWrapper.AutoWrapperMiddleware) Request: GET https localhost:44321/favicon.ico   Responded with [404] in 4ms
+2020-03-11T15:50:47.2094619-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "Auth Server" completed after 9518.0463ms with status Degraded and 'null'
+2020-03-11T15:50:47.7015161-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "External Api" completed after 10010.0954ms with status Degraded and 'null'
+2020-03-11T15:50:47.9347813-04:00 [INF] (AutoWrapper.AutoWrapperMiddleware) Request: GET https localhost:44321/api/v1/persons/paged/ ?$count=true&$skip=0&$top=12  Responded with [400] in 10269ms
+2020-03-11T15:50:48.0860254-04:00 [ERR] (HealthChecks.UI.Core.Notifications.WebHookFailureNotifier) The failure notification for  has not executed successfully.
+2020-03-11T15:50:58.3249162-04:00 [ERR] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "PostgreSQL" completed after 2.6094ms with status Unhealthy and 'null'
+2020-03-11T15:54:10.6688175-04:00 [INF] () Starting web host
+2020-03-11T15:54:14.3718704-04:00 [ERR] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "PostgreSQL" completed after 56.1189ms with status Unhealthy and 'null'
+2020-03-11T15:54:14.6032570-04:00 [INF] (AutoWrapper.AutoWrapperMiddleware) Request: GET https localhost:44321/api/v1/persons   Responded with [405] in 346ms
+2020-03-11T15:54:14.6698630-04:00 [INF] (AutoWrapper.AutoWrapperMiddleware) Request: GET https localhost:44321/favicon.ico   Responded with [404] in 3ms
+2020-03-11T15:55:21.7484531-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "Auth Server" completed after 67474.5483ms with status Degraded and 'null'
+2020-03-11T15:55:21.7498769-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "External Api" completed after 67459.3515ms with status Degraded and 'null'
+2020-03-11T15:55:22.3158350-04:00 [ERR] (HealthChecks.UI.Core.Notifications.WebHookFailureNotifier) The failure notification for  has not executed successfully.
+2020-03-11T15:55:22.6315617-04:00 [INF] (AutoWrapper.AutoWrapperMiddleware) Request: GET https localhost:44321/api/v1/persons/paged/ ?$count=true&$skip=0&$top=12  Responded with [400] in 68375ms
+2020-03-11T15:56:21.6984792-04:00 [INF] (AutoWrapper.AutoWrapperMiddleware) Request: GET https localhost:44321/api/v1/persons/paged/ ?$count=true&$skip=0&$top=12  Responded with [400] in 58936ms
+2020-03-11T15:56:21.7428469-04:00 [ERR] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "PostgreSQL" completed after 1.0752ms with status Unhealthy and 'null'
+2020-03-11T15:56:21.9366844-04:00 [INF] (AutoWrapper.AutoWrapperMiddleware) Request: GET https localhost:44321/api/v1/persons/paged   Responded with [200] in 6378ms
+2020-03-11T15:56:25.7547110-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "Auth Server" completed after 4015.3086ms with status Degraded and 'null'
+2020-03-11T15:56:25.7547110-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "External Api" completed after 4015.3086ms with status Degraded and 'null'
+2020-03-11T15:56:25.8325607-04:00 [ERR] (HealthChecks.UI.Core.Notifications.WebHookFailureNotifier) The failure notification for  has not executed successfully.
+2020-03-11T15:56:35.9938652-04:00 [ERR] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "PostgreSQL" completed after 1.1293ms with status Unhealthy and 'null'
+2020-03-11T15:56:40.0023661-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "External Api" completed after 4011.846ms with status Degraded and 'null'
+2020-03-11T15:56:40.0023596-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "Auth Server" completed after 4012.3647ms with status Degraded and 'null'
+2020-03-11T15:56:40.0167697-04:00 [INF] (HealthChecks.UI.Core.Notifications.WebHookFailureNotifier) Notification is sent on same window time.
+2020-03-11T15:56:50.1500420-04:00 [ERR] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "PostgreSQL" completed after 8.7315ms with status Unhealthy and 'null'
+2020-03-11T15:56:54.1546793-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "External Api" completed after 4014.2864ms with status Degraded and 'null'
+2020-03-11T15:56:54.1561848-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "Auth Server" completed after 4016.3744ms with status Degraded and 'null'
+2020-03-11T15:56:54.1662264-04:00 [INF] (HealthChecks.UI.Core.Notifications.WebHookFailureNotifier) Notification is sent on same window time.
+2020-03-11T15:57:04.2531053-04:00 [ERR] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "PostgreSQL" completed after 19.6357ms with status Unhealthy and 'null'
+2020-03-11T15:57:08.2526331-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "Auth Server" completed after 4019.1273ms with status Degraded and 'null'
+2020-03-11T15:57:08.2623054-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "External Api" completed after 4028.8186ms with status Degraded and 'null'
+2020-03-11T15:57:08.2703933-04:00 [INF] (HealthChecks.UI.Core.Notifications.WebHookFailureNotifier) Notification is sent on same window time.
+2020-03-11T15:57:18.3380206-04:00 [ERR] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "PostgreSQL" completed after 2.9896ms with status Unhealthy and 'null'
+2020-03-11T15:57:22.3413520-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "Auth Server" completed after 4012.0864ms with status Degraded and 'null'
+2020-03-11T15:57:22.3421968-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "External Api" completed after 4012.3549ms with status Degraded and 'null'
+2020-03-11T15:57:22.3502964-04:00 [INF] (HealthChecks.UI.Core.Notifications.WebHookFailureNotifier) Notification is sent on same window time.
+2020-03-11T15:57:32.4243581-04:00 [ERR] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "PostgreSQL" completed after 4.1012ms with status Unhealthy and 'null'
+2020-03-11T15:57:36.4308108-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "Auth Server" completed after 4010.8723ms with status Degraded and 'null'
+2020-03-11T15:57:36.4308108-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "External Api" completed after 4010.7701ms with status Degraded and 'null'
+2020-03-11T15:57:36.4917570-04:00 [ERR] (HealthChecks.UI.Core.Notifications.WebHookFailureNotifier) The failure notification for  has not executed successfully.
+2020-03-11T15:57:46.5666704-04:00 [ERR] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "PostgreSQL" completed after 2.4727ms with status Unhealthy and 'null'
+2020-03-11T15:57:46.5683930-04:00 [ERR] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "Google Ping" completed after 7.805ms with status Unhealthy and '"Ping check status [TimedOut]. Host www.google.com did not respond within 100 ms."'
+2020-03-11T15:57:46.5688388-04:00 [ERR] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "Bing Ping" completed after 8.1061ms with status Unhealthy and '"Ping check status [TimedOut]. Host www.bing.com did not respond within 100 ms."'
+2020-03-11T15:57:50.5718260-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "External Api" completed after 4010.3507ms with status Degraded and 'null'
+2020-03-11T15:57:50.5802655-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "Auth Server" completed after 4018.7816ms with status Degraded and 'null'
+2020-03-11T15:57:50.5877466-04:00 [INF] (HealthChecks.UI.Core.Notifications.WebHookFailureNotifier) Notification is sent on same window time.
+2020-03-11T15:58:00.6422000-04:00 [ERR] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "PostgreSQL" completed after 2.0342ms with status Unhealthy and 'null'
+2020-03-11T15:58:04.6535222-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "Auth Server" completed after 4014.2287ms with status Degraded and 'null'
+2020-03-11T15:58:04.6608844-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "External Api" completed after 4018.6881ms with status Degraded and 'null'
+2020-03-11T15:58:04.6678348-04:00 [INF] (HealthChecks.UI.Core.Notifications.WebHookFailureNotifier) Notification is sent on same window time.
+2020-03-11T15:58:14.7815977-04:00 [ERR] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "PostgreSQL" completed after 4.0422ms with status Unhealthy and 'null'
+2020-03-11T15:58:18.7907684-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "Auth Server" completed after 4012.4681ms with status Degraded and 'null'
+2020-03-11T15:58:18.7911769-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "External Api" completed after 4013.0597ms with status Degraded and 'null'
+2020-03-11T15:58:18.7987909-04:00 [INF] (HealthChecks.UI.Core.Notifications.WebHookFailureNotifier) Notification is sent on same window time.
+2020-03-11T15:58:28.8950849-04:00 [ERR] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "PostgreSQL" completed after 3.892ms with status Unhealthy and 'null'
+2020-03-11T15:58:32.9035957-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "External Api" completed after 4013.4521ms with status Degraded and 'null'
+2020-03-11T15:58:32.9146811-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "Auth Server" completed after 4024.0806ms with status Degraded and 'null'
+2020-03-11T15:58:32.9218511-04:00 [INF] (HealthChecks.UI.Core.Notifications.WebHookFailureNotifier) Notification is sent on same window time.
+2020-03-11T15:58:43.0352963-04:00 [ERR] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "PostgreSQL" completed after 3.5356ms with status Unhealthy and 'null'
+2020-03-11T15:58:43.0671295-04:00 [ERR] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "Bing Ping" completed after 35.4971ms with status Unhealthy and '"Ping check status [TimedOut]. Host www.bing.com did not respond within 100 ms."'
+2020-03-11T15:58:43.0675565-04:00 [ERR] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "Google Ping" completed after 35.9451ms with status Unhealthy and '"Ping check status [TimedOut]. Host www.google.com did not respond within 100 ms."'
+2020-03-11T15:58:47.0436200-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "External Api" completed after 4011.7762ms with status Degraded and 'null'
+2020-03-11T15:58:47.0442129-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "Auth Server" completed after 4012.4997ms with status Degraded and 'null'
+2020-03-11T15:58:47.2290852-04:00 [ERR] (HealthChecks.UI.Core.Notifications.WebHookFailureNotifier) The failure notification for  has not executed successfully.
+2020-03-11T15:58:57.3403101-04:00 [ERR] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "PostgreSQL" completed after 2.0917ms with status Unhealthy and 'null'
+2020-03-11T15:59:01.3507435-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "External Api" completed after 4012.4749ms with status Degraded and 'null'
+2020-03-11T15:59:01.3516296-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "Auth Server" completed after 4013.5976ms with status Degraded and 'null'
+2020-03-11T15:59:01.3589357-04:00 [INF] (HealthChecks.UI.Core.Notifications.WebHookFailureNotifier) Notification is sent on same window time.
+2020-03-11T15:59:11.4458201-04:00 [ERR] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "PostgreSQL" completed after 1.1334ms with status Unhealthy and 'null'
+2020-03-11T15:59:15.4525669-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "External Api" completed after 4010.2718ms with status Degraded and 'null'
+2020-03-11T15:59:15.4526005-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "Auth Server" completed after 4010.5717ms with status Degraded and 'null'
+2020-03-11T15:59:15.4591042-04:00 [INF] (HealthChecks.UI.Core.Notifications.WebHookFailureNotifier) Notification is sent on same window time.
+2020-03-11T15:59:25.5744339-04:00 [ERR] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "PostgreSQL" completed after 1.6089ms with status Unhealthy and 'null'
+2020-03-11T15:59:28.9205511-04:00 [INF] (AutoWrapper.AutoWrapperMiddleware) Request: GET https localhost:44321/api/v1/persons/paged/ ?$count=true&$skip=0&$top=12  Responded with [400] in 2945ms
+2020-03-11T15:59:30.9013918-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "External Api" completed after 5326.5175ms with status Degraded and 'null'
+2020-03-11T15:59:30.9014229-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "Auth Server" completed after 5324.9605ms with status Degraded and 'null'
+2020-03-11T15:59:30.9120222-04:00 [INF] (HealthChecks.UI.Core.Notifications.WebHookFailureNotifier) Notification is sent on same window time.
+2020-03-11T15:59:41.0267740-04:00 [ERR] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "PostgreSQL" completed after 22.7064ms with status Unhealthy and 'null'
+2020-03-11T15:59:41.0663492-04:00 [ERR] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "Google Ping" completed after 62.3951ms with status Unhealthy and '"Ping check status [TimedOut]. Host www.google.com did not respond within 100 ms."'
+2020-03-11T15:59:41.0664755-04:00 [ERR] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "Bing Ping" completed after 62.5312ms with status Unhealthy and '"Ping check status [TimedOut]. Host www.bing.com did not respond within 100 ms."'
+2020-03-11T15:59:45.0258824-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "Auth Server" completed after 4020.6493ms with status Degraded and 'null'
+2020-03-11T15:59:45.0375463-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "External Api" completed after 4033.4585ms with status Degraded and 'null'
+2020-03-11T15:59:45.0481273-04:00 [INF] (HealthChecks.UI.Core.Notifications.WebHookFailureNotifier) Notification is sent on same window time.
+2020-03-11T15:59:55.1231593-04:00 [ERR] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "PostgreSQL" completed after 4.4002ms with status Unhealthy and 'null'
+2020-03-11T15:59:59.1322259-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "External Api" completed after 4013.3483ms with status Degraded and 'null'
+2020-03-11T15:59:59.1362704-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "Auth Server" completed after 4017.3922ms with status Degraded and 'null'
+2020-03-11T15:59:59.2014840-04:00 [ERR] (HealthChecks.UI.Core.Notifications.WebHookFailureNotifier) The failure notification for  has not executed successfully.
+2020-03-11T16:00:11.6122136-04:00 [ERR] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "PostgreSQL" completed after 4.1885ms with status Unhealthy and 'null'
+2020-03-11T16:00:11.6127915-04:00 [INF] (AutoWrapper.AutoWrapperMiddleware) Request: GET https localhost:44321/api/v1/persons/paged ?$count=true&$skip=0&$top=12  Responded with [400] in 3397ms
+2020-03-11T16:00:15.6227815-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "Auth Server" completed after 4014.4892ms with status Degraded and 'null'
+2020-03-11T16:00:15.6233321-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "External Api" completed after 4015.2329ms with status Degraded and 'null'
+2020-03-11T16:00:15.6316880-04:00 [INF] (HealthChecks.UI.Core.Notifications.WebHookFailureNotifier) Notification is sent on same window time.
+2020-03-11T16:00:25.7185469-04:00 [ERR] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "PostgreSQL" completed after 3.4234ms with status Unhealthy and 'null'
+2020-03-11T16:00:29.7281855-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "Auth Server" completed after 4013.0572ms with status Degraded and 'null'
+2020-03-11T16:00:29.7284190-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "External Api" completed after 4013.0887ms with status Degraded and 'null'
+2020-03-11T16:00:29.7343541-04:00 [INF] (HealthChecks.UI.Core.Notifications.WebHookFailureNotifier) Notification is sent on same window time.
+2020-03-11T16:00:39.8764230-04:00 [ERR] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "PostgreSQL" completed after 3.6314ms with status Unhealthy and 'null'
+2020-03-11T16:00:43.8840879-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "External Api" completed after 4011.6977ms with status Degraded and 'null'
+2020-03-11T16:00:43.8840842-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "Auth Server" completed after 4011.6879ms with status Degraded and 'null'
+2020-03-11T16:00:43.8904247-04:00 [INF] (HealthChecks.UI.Core.Notifications.WebHookFailureNotifier) Notification is sent on same window time.
+2020-03-11T16:00:52.3128841-04:00 [INF] (AutoWrapper.AutoWrapperMiddleware) Request: GET https localhost:44321/api/v1/persons/paged ?$count=true&$skip=0&$top=7  Responded with [200] in 2395ms
+2020-03-11T16:00:54.0236967-04:00 [ERR] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "PostgreSQL" completed after 10.5428ms with status Unhealthy and 'null'
+2020-03-11T16:00:54.0664399-04:00 [ERR] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "Bing Ping" completed after 62.3663ms with status Unhealthy and '"Ping check status [TimedOut]. Host www.bing.com did not respond within 100 ms."'
+2020-03-11T16:00:54.0666445-04:00 [ERR] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "Google Ping" completed after 63.9718ms with status Unhealthy and '"Ping check status [TimedOut]. Host www.google.com did not respond within 100 ms."'
+2020-03-11T16:00:58.0229154-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "Auth Server" completed after 4019.9563ms with status Degraded and 'null'
+2020-03-11T16:00:58.0372602-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "External Api" completed after 4024.1273ms with status Degraded and 'null'
+2020-03-11T16:00:58.0430419-04:00 [INF] (HealthChecks.UI.Core.Notifications.WebHookFailureNotifier) Notification is sent on same window time.
+2020-03-11T16:01:08.1091467-04:00 [ERR] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "PostgreSQL" completed after 15.9982ms with status Unhealthy and 'null'
+2020-03-11T16:01:12.1065121-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "Auth Server" completed after 4013.7336ms with status Degraded and 'null'
+2020-03-11T16:01:12.1101159-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "External Api" completed after 4015.8032ms with status Degraded and 'null'
+2020-03-11T16:01:12.2407138-04:00 [ERR] (HealthChecks.UI.Core.Notifications.WebHookFailureNotifier) The failure notification for  has not executed successfully.
+2020-03-11T16:01:22.3769912-04:00 [ERR] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "PostgreSQL" completed after 11.7324ms with status Unhealthy and 'null'
+2020-03-11T16:01:26.3743848-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "External Api" completed after 4009.3003ms with status Degraded and 'null'
+2020-03-11T16:01:26.3903455-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "Auth Server" completed after 4021.8116ms with status Degraded and 'null'
+2020-03-11T16:01:26.4051615-04:00 [INF] (HealthChecks.UI.Core.Notifications.WebHookFailureNotifier) Notification is sent on same window time.
+2020-03-11T16:01:36.4972001-04:00 [ERR] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "PostgreSQL" completed after 3.3449ms with status Unhealthy and 'null'
+2020-03-11T16:01:36.5666983-04:00 [ERR] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "Google Ping" completed after 74.4409ms with status Unhealthy and '"Ping check status [TimedOut]. Host www.google.com did not respond within 100 ms."'
+2020-03-11T16:01:40.5051085-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "Auth Server" completed after 4012.6458ms with status Degraded and 'null'
+2020-03-11T16:01:40.5082133-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "External Api" completed after 4015.7453ms with status Degraded and 'null'
+2020-03-11T16:01:40.5163687-04:00 [INF] (HealthChecks.UI.Core.Notifications.WebHookFailureNotifier) Notification is sent on same window time.
+2020-03-11T16:01:50.6021224-04:00 [ERR] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "PostgreSQL" completed after 3.2656ms with status Unhealthy and 'null'
+2020-03-11T16:01:54.6161968-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "Auth Server" completed after 4017.5925ms with status Degraded and 'null'
+2020-03-11T16:01:54.6234342-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "External Api" completed after 4024.5706ms with status Degraded and 'null'
+2020-03-11T16:01:54.6399502-04:00 [INF] (HealthChecks.UI.Core.Notifications.WebHookFailureNotifier) Notification is sent on same window time.

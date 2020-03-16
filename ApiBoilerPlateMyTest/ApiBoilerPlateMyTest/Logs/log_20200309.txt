@@ -1,0 +1,12 @@
+2020-03-09T21:25:30.0372257-04:00 [INF] () Starting web host
+2020-03-09T21:25:41.0770844-04:00 [ERR] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "Bing Ping" completed after 106.6944ms with status Unhealthy and '"Ping check status [TimedOut]. Host www.bing.com did not respond within 100 ms."'
+2020-03-09T21:25:41.0770893-04:00 [ERR] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "Google Ping" completed after 106.6082ms with status Unhealthy and '"Ping check status [TimedOut]. Host www.google.com did not respond within 100 ms."'
+2020-03-09T21:25:41.2272288-04:00 [ERR] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "PostgreSQL" completed after 168.1198ms with status Unhealthy and 'null'
+2020-03-09T21:25:45.1198540-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "External Api" completed after 4140.292ms with status Degraded and 'null'
+2020-03-09T21:25:45.1198537-04:00 [WRN] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "Auth Server" completed after 4142.8688ms with status Degraded and 'null'
+2020-03-09T21:27:49.6987812-04:00 [INF] () Starting web host
+2020-03-09T21:27:54.2971915-04:00 [ERR] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "PostgreSQL" completed after 65.9449ms with status Unhealthy and 'null'
+2020-03-09T21:44:48.8372235-04:00 [INF] () Starting web host
+2020-03-09T21:44:52.8992048-04:00 [ERR] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "PostgreSQL" completed after 56.0759ms with status Unhealthy and 'null'
+2020-03-09T21:51:49.2884566-04:00 [INF] () Starting web host
+2020-03-09T21:51:54.8517927-04:00 [ERR] (Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService) Health check "PostgreSQL" completed after 81.465ms with status Unhealthy and 'null'

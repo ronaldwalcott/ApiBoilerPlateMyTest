@@ -1,0 +1,192 @@
+﻿
+@{
+    ViewData["Title"] = "Users";
+}
+
+@{
+    List<object> toolbarItems = new List<object>();
+    toolbarItems.Add("Edit");
+    toolbarItems.Add("Delete");
+    toolbarItems.Add("Update");
+    toolbarItems.Add("Cancel");
+    toolbarItems.Add(new { text = "Roles", tooltipText = "Roles", prefixIcon = "e-claim-icon", id = "Roles" });
+}
+
+
+<h1>Users</h1>
+
+<ejs-grid id="Grid" allowPaging="true" allowSorting="true" actionComplete="complete" toolbarClick="toolbarClick" toolbar=toolbarItems >
+    <e-grid-editSettings allowAdding="true" allowDeleting="true" allowEditing="true" mode="Dialog" template='#dialogtemplate'></e-grid-editSettings>
+    <e-grid-pagesettings pagesize="10"></e-grid-pagesettings>
+    <e-data-manager url="/UserManagement/UserEdit/UsersDataSource" updateUrl="/UserManagement/UserEdit/Update" removeUrl="/UserManagement/UserEdit/Delete" adaptor="UrlAdaptor"></e-data-manager>
+    <e-grid-columns>
+        <e-grid-column field="Id" headerText="ID" isPrimaryKey="true" visible="false"></e-grid-column>
+        <e-grid-column field="UserName" headerText="Username" type="string" width="120"></e-grid-column>
+        <e-grid-column field="Name" headerText="Name" type="string" width="120"></e-grid-column>
+        <e-grid-column field="EmployeeNumber" headerText="Employee No" type="string" width="120"></e-grid-column>
+        <e-grid-column field="RoleNames" headerText="Role names" type="string" width="120"></e-grid-column>
+        <e-grid-column field="LockoutEnabled" headerText="Locked Out" displayAsCheckBox="true" width="120"></e-grid-column>
+    </e-grid-columns>
+</ejs-grid>
+
+
+@*<div id="container" style="height:400px;">
+    <ejs-dialog id="dialog" isModal="true" showCloseIcon="true" overlayClick="onOverlayClick" header="Please select a user first" visible="false" target="#container" width="300px"></ejs-dialog>
+</div>*@
+
+<input type="hidden" id="UserSelection" value="" />
+<input type="hidden" id="EditType" value="" />
+
+
+<script id='dialogtemplate' type="text/x-template">
+    <div id="dialogTemp">
+    </div>
+</script>
+
+<script type="text/javascript">
+    function complete(args) {
+        console.log("actioncomplete");
+        console.log("Value of edit type " + $("#EditType").val());
+        console.log(JSON.parse(JSON.stringify(args.rowData)).Name);
+
+            if (args.requestType === 'beginEdit' || args.requestType === 'add') {
+                let spinner = ej.popups.createSpinner({ target: args.dialog.element });
+                ej.popups.showSpinner(args.dialog.element);
+                let dialog = args.dialog;
+                // change the header of the dialog
+                dialog.header = args.requestType === 'beginEdit' ? 'Edit Record' : 'New Record';
+                if ($("#EditType").val() == "Roles") {
+                    dialog.header = "Edit roles for " + JSON.parse(JSON.stringify(args.rowData)).Name
+                }
+                if (args.requestType === 'beginEdit' && $("#EditType").val() != "Roles") {
+                    var ajax = new ej.base.Ajax({
+                        url: "@Url.Action("Editpartial", "UserEdit", new { Area = "UserManagement" })", //render the partial view
+                        type: "POST",
+                        contentType: "application/json",
+                        data: JSON.stringify({ value: args.rowData })
+                    });
+                    ajax.send().then(function (data) {
+                        appendElement(data, args.form); //Render the edit form with selected record
+                        args.form.elements.namedItem('UserName').focus(); //set the focus for editing to username
+                        ej.popups.hideSpinner(args.dialog.element);
+                    }).catch(function (xhr) {
+                        console.log(xhr);
+                        ej.popups.hideSpinner(args.dialog.element);
+                    });
+                }
+                else if (args.requestType === 'beginEdit' && $("#EditType").val() == "Roles") {
+                    var ajax = new ej.base.Ajax({
+                        url: "@Url.Action("EditRolesPartial", "UserEdit", new { Area = "UserManagement" })", //render the partial view
+                        type: "POST",
+                        contentType: "application/json",
+                        data: JSON.stringify({ value: args.rowData })
+                    });
+
+                    //console.log(JSON.stringify({ value: args.rowData }));
+
+                    ajax.send().then(function (data) {
+                        appendElement(data, args.form); //Render the edit form with selected record
+                        ej.popups.hideSpinner(args.dialog.element);
+                    }).catch(function (xhr) {
+                        console.log(xhr);
+                        ej.popups.hideSpinner(args.dialog.element);
+                    });
+                }
+            }
+        }
+
+
+    function toolbarClick(args) {
+        console.log("args.item.id " + args.item.id);
+        if (args.item.id === 'Roles') {
+            var data = document.getElementById('Grid').ej2_instances[0].getSelectedRecords();
+            $("#EditType").val("Roles");
+            document.getElementById('Grid').ej2_instances[0].startEdit(data);
+        }
+        else if (args.item.id === 'Grid_edit') {
+            $("#EditType").val("");
+        }
+    }
+
+
+
+
+        function appendElement(elementString, form) {
+            form.querySelector("#dialogTemp").innerHTML = elementString;
+            var script = document.createElement('script');
+            script.type = "text/javascript";
+            var serverScript = form.querySelector("#dialogTemp").querySelector('script');
+            script.textContent = serverScript.innerHTML;
+            document.head.appendChild(script);
+            serverScript.remove();
+    }
+
+
+
+
+
+
+</script>
+
+
+
+
+<script>
+    function onChange(args) {
+        console.log(arguments[0]);
+        console.log(args.event.toElement.name);
+        console.log(args.event.toElement.id);
+        console.log(args.event.toElement.checked);
+
+        console.log("Checkbox " + JSON.stringify(args));
+        //var data = document.getElementById('Grid').ej2_instances[0].getSelectedRecords();
+        //console.log(JSON.stringify(data));
+
+        //var dialog = this.parentObj;
+        //console.log(JSON.stringify(dialog));
+    }
+</script>
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+
+    //function toolbarClick(args) {
+    //    console.log("args.item.id " + args.item.id);
+    //    if (args.item.id === 'Roles') {
+    //        var data = document.getElementById('Grid').ej2_instances[0].getSelectedRecords();
+    //        $("#EditType").val("Roles");
+    //        document.getElementById('Grid').ej2_instances[0].startEdit(data);
+    //    }
+    //    else if (args.item.id === 'Grid_edit') {
+    //        $("#EditType").val("");
+    //    }
+    //}
+
+    //function onRowSelected(args) {
+    //    //Retrieve the selected records of the grid
+    //    var result = this.getSelectedRecords();
+    //    //place the id of the grid`s selected record as value of hidden element
+    //    $("#UserSelection").val(result[0].Id);
+    //}
+
+    //function onOverlayClick() {
+    //    var dialog = document.getElementById("dialog").ej2_instances[0];
+    //    dialog.hide();
+    //}
+
+</script>
+
+
+@*<style>
+        .e-claim-icon::before {
+            content: '\e30d';
+        }
+    </style>*@

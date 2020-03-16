@@ -1,0 +1,37 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<div>
+
+    <ejs-grid id="Grid" toolbar="@(new List<string>() { "Add", "Update", "Cancel" })" allowPaging="true" allowSorting="true" allowFiltering="true" actionFailure="actionFailure">
+        <e-data-manager url="https://localhost:44321/odata/persons" adaptor="ODataV4Adaptor" crossdomain="true"></e-data-manager>
+        <e-grid-pagesettings pageSize="7">
+        </e-grid-pagesettings>
+        <e-grid-columns>
+            <e-grid-column field="ID" headerText="ID" isPrimaryKey="true" textAlign="Right" width="120"></e-grid-column>
+            <e-grid-column field="FirstName" headerText="First Name" width="150"></e-grid-column>
+            <e-grid-column field="LastName" headerText="Last Name" width="150"></e-grid-column>
+            <e-grid-column field="FullName" headerText="Name" width="170"></e-grid-column>
+            <e-grid-column field="DateOfBirth" headerText="Date of Birth" width="120"></e-grid-column>
+        </e-grid-columns>
+    </ejs-grid>
+</div>
+<script>
+    function actionFailure(args) {
+        console.log(args);
+        var span = document.createElement('span');
+        this.element.parentNode.insertBefore(span, this.element);
+        span.style.color = '#FF0000'
+        span.innerHTML = 'Server exception: 404 Not found';
+    }
+</script>
+
+
+
+@*<e-data-manager url="https://localhost:44321/api/v1/persons/paged" adaptor="ODataV4Adaptor" crossdomain="true"></e-data-manager>*@

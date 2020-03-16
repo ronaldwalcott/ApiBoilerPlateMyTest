@@ -1,0 +1,76 @@
+﻿@model APiBoilerPlateWeb.Areas.UserManagement.Models.UserListViewModel
+@*//define the model for store the model values*@
+
+@using Syncfusion.EJ2
+
+    <div>
+        <input asp-for="Id" value=@Model.Id disabled type='hidden' />
+
+        @*<input type="checkbox" name="UserRoles.HasRole[3]" id="UserRoles[3].HasRole" /> @Html.DisplayFor(model => Model.UserRoles[3].RoleName)*@
+
+    <div class="form-row">
+        @{ int i = 0; }
+        @foreach (var item in Model.UserRoles)
+        @*@for (var i = 0; i < Model.UserRoles.Count(); i++)*@
+        {
+        <div class="form-group col-md-4">
+            @*<input type="checkbox" asp-for="UserRoles[i].HasRole" /> @Html.DisplayFor(model => Model.UserRoles[i].RoleName)*@
+            @*<input type="checkbox" asp-for="UserRoles[i].HasRole" /> @Html.DisplayFor(model => Model.UserRoles[i].RoleName)*@
+
+            @*Outputs true*@
+            @*<input type="text" asp-for="@Model.UserRoles[i].HasRole" /> @Html.DisplayFor(model => item.RoleName)*@
+            @*<input type="checkbox" asp-for="UserRoles[i].HasRole" /> @Html.DisplayFor(model => item.RoleName)*@
+
+            @*<input type="checkbox" name="@Model.UserRoles[i].HasRole" id="@Model.UserRoles[i].HasRole"/> @Html.DisplayFor(model => item.RoleName)*@
+            @*<input type="text" asp-for="UserRoles[i].HasRole" /> @Html.DisplayFor(model => item.RoleName)*@
+            @*<ejs-checkbox id="@item.RoleName" ejs-for="@Model.UserRoles[i].HasRole" label="@item.RoleName" change="onChange"></ejs-checkbox>*@
+
+            @{string IDField = "UserRoles_" + i + "_HasRole";}
+            @*<ejs-checkbox id="@IDField" ejs-for="@Model.UserRoles[i].HasRole" label="@Model.UserRoles[i].RoleName" change="onChange"></ejs-checkbox>*@
+            @*<ejs-checkbox id="@IDField" ejs-for="@item.HasRole" label="@item.RoleName" change="onChange"></ejs-checkbox>*@
+            @*<ejs-checkbox id="@IDField" ejs-for="UserRoles[i].HasRole" label="@item.RoleName" change="onChange"></ejs-checkbox>*@
+            <ejs-checkbox id="@item.RoleName" ejs-for="UserRoles[i].HasRole" label="@item.RoleName" change="onChange"></ejs-checkbox>
+
+
+
+
+
+            @*<input asp-for=@Model.UserRoles[i].HasRole value=@Model.UserRoles[i].HasRole /> @Html.DisplayFor(model => item.RoleName)*@
+
+            @*<div class="checkbox">
+            <label>
+                <input asp-for="UserRoles[i].HasRole" /> @Html.DisplayFor(model => item.RoleName)
+            </label>
+        </div>*@
+            @*<ejs-checkbox id="@item.RoleName" ejs-for="@Model.UserRoles[i].HasRole" label="@item.RoleName"></ejs-checkbox>*@
+
+
+
+        </div>
+
+            //create two hidden fields for the id and rolename values
+            <input type="hidden" asp-for="UserRoles[i].Id" />
+            <input type="hidden" asp-for="UserRoles[i].RoleName" />
+
+
+
+            i++;
+
+
+        }
+    </div>
+
+
+
+
+
+
+
+
+    </div>
+
+    
+
+
+
+<ejs-scripts></ejs-scripts>
